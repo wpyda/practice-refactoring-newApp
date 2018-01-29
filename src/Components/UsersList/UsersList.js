@@ -1,15 +1,13 @@
 import React from 'react'
 
+import User from './User'
+
 const UsersList = props => (
     <div>
         {
             props.usersData // if this is falsy, it will be returned
             &&
-            props.usersData.results.map((user)=> (
-                <div key={user.email}>
-                    {user.name.first} {user.name.last}
-                </div>
-            ))
+            props.usersData.results.map(user => (<User user={user} />))
         }
     </div>
 )

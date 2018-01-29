@@ -1,5 +1,5 @@
 import React from 'react'
-import UsersList from './components/UsersList'
+import UsersList from './Components/UsersList'
 
 import {connect} from 'react-redux'
 
