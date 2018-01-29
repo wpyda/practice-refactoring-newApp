@@ -2,8 +2,16 @@ import React from 'react'
 
 import {connect} from 'react-redux'
 
-const App = () => (
-    <div>App</div>
+const App = (props) => (
+    <div>
+        {
+            props.usersData // if this is falsy, it will be returned
+            &&
+            props.usersData.map((user)=> (
+                <div>user</div>
+            ))
+        }
+    </div>
 )
 
 const mapStateToProps = state => ({
@@ -13,4 +21,4 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps
-) (App)
+)(App)
