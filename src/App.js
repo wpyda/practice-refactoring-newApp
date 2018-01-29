@@ -1,23 +1,17 @@
 import React from 'react'
+import UsersList from './components/UsersList'
 
 import {connect} from 'react-redux'
 
 const App = (props) => (
     <div>
-        {
-            props.usersData // if this is falsy, it will be returned
-            &&
-            props.usersData.map((user)=> (
-                <div>user</div>
-            ))
-        }
+        <UsersList usersData={props.usersData} />
     </div>
 )
 
 const mapStateToProps = state => ({
-    usersData: state.users.usersData.results
+    usersData: state.users.usersData
 })
-
 
 export default connect(
     mapStateToProps

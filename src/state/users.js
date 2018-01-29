@@ -5,8 +5,8 @@ const setUserData = data => ({
     data
 })
 
-export const fetchUsersData = (x) => (dispatch, getState) => {
-    fetch(`https://randomuser.me/api/?results=${x}`)
+export const fetchUsersData = (numberOfUsers) => (dispatch, getState) => {
+    fetch(`https://randomuser.me/api/?nat=gb&results=${numberOfUsers}`)
         .then(response => response.json())
         .then(data => dispatch(setUserData(data))) //when data arrives, sync (normal) action is dispatched
 }
