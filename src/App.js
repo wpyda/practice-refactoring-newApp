@@ -15,7 +15,7 @@ const App = (props) => (
 )
 
 const mapStateToProps = state => ({
-    usersData: state.users.usersData
+    usersData: state.users.usersData.results
 })
 
 
